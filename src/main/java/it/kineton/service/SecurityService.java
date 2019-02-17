@@ -1,4 +1,4 @@
-package com.hellokoding.auth.service;
+package it.kineton.service;
 
 public interface SecurityService {
     String findLoggedInUsername();

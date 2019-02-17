@@ -1,12 +1,17 @@
-package com.hellokoding.auth.service;
+package it.kineton.service;
 
-import com.hellokoding.auth.model.User;
-import com.hellokoding.auth.repository.RoleRepository;
-import com.hellokoding.auth.repository.UserRepository;
+import it.kineton.model.Event;
+import it.kineton.model.SportsCenter;
+import it.kineton.model.User;
+import it.kineton.repository.EventRepository;
+import it.kineton.repository.RoleRepository;
+import it.kineton.repository.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.HashSet;
 
 @Service
@@ -17,7 +22,7 @@ public class UserServiceImpl implements UserService {
     private RoleRepository roleRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
-
+    
     @Override
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
@@ -29,4 +34,19 @@ public class UserServiceImpl implements UserService {
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
+    
+	@Override
+	public void updateUser(Long id, User utente) {
+		userRepository.save(utente);
+	
+	}
+
+	public void deleteUser(Long id) {
+		userRepository.delete(id);
+		
+	}
+	
+	
+	
+	
 }

@@ -1,4 +1,4 @@
-package com.hellokoding.auth.model;
+package it.kineton.model;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -11,7 +11,9 @@ public class User {
     private String password;
     private String passwordConfirm;
     private Set<Role> roles;
-
+    private String numero_telefono;
+  
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
@@ -56,4 +58,12 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+	public String getNumero_telefono() {
+		return numero_telefono;
+	}
+
+	public void setNumero_telefono(String numero_telefono) {
+		this.numero_telefono = numero_telefono;
+	}
 }
