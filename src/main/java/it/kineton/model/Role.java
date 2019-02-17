@@ -1,4 +1,4 @@
-package com.hellokoding.auth.model;
+package it.kineton.model;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -9,6 +9,8 @@ public class Role {
     private Long id;
     private String name;
     private Set<User> users;
+    
+    
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,8 +1,9 @@
-package com.hellokoding.auth.service;
+package it.kineton.service;
 
-import com.hellokoding.auth.model.Role;
-import com.hellokoding.auth.model.User;
-import com.hellokoding.auth.repository.UserRepository;
+import it.kineton.model.Role;
+import it.kineton.model.User;
+import it.kineton.repository.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
