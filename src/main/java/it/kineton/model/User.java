@@ -1,10 +1,12 @@
 package it.kineton.model;
 
 import javax.persistence.*;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     private Long id;
     private String username;
