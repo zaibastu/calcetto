@@ -51,6 +51,10 @@ public void partecipate (Event event,User user) {
 	 public List<Event> find (){
 		return eventRepository.findAll();
 	}
+	 
+	public void delete_event(Event event) {
+		eventRepository.delete(event);
+	}
 	
 	
 	

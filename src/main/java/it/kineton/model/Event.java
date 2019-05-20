@@ -18,9 +18,6 @@ public class Event {
 	private SportsCenter campo;
 	private String nome_prenotazione;
 	private Date orario=new Date();
-	@Column(nullable=false)
-	@Type(type="yes_no")
-	private boolean eliminato=Boolean.FALSE;
 	private List<User> partecipanti=new ArrayList<User>();
 	
 	@Id
@@ -56,12 +53,7 @@ public class Event {
 	public void setOrario(Date orario) {
 		this.orario = orario;
 	}
-	public boolean isEliminato() {
-		return eliminato;
-	}
-	public void setEliminato(boolean eliminato) {
-		this.eliminato = eliminato;
-	}
+	
 	
 	@ManyToOne 
 	public User getOrganizzatore() {

@@ -15,15 +15,13 @@ import java.util.stream.Stream;
 @Entity
 @Table(name = "centro_sportivo")
 public class SportsCenter {
+	
 	private Long id;
 	private String nome_centro;
 	private String indirizzo_centro;
 	private String numero_telefono;
 	
-    @Column(nullable=false)
-	@Type(type="yes_no")
-	private boolean eliminato=Boolean.FALSE;
-	
+    
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
@@ -52,13 +50,6 @@ public class SportsCenter {
 		this.numero_telefono = numero_telefono;
 	}
 	
-	
-	public boolean isEliminato() {
-		return eliminato;
-	}
-	public void setEliminato(boolean eliminato) {
-		this.eliminato = eliminato;
-	}
 	
 
 }
